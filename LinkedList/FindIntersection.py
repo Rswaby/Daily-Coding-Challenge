@@ -9,3 +9,13 @@ B = 99 - 1 -/
 
 return 8
 '''
+
+
+def llLength(head):
+    if head == None:
+        return 0
+    return 1 + llLength(head.next)
+
+
+def intersect(AList, BList):
+    pass
