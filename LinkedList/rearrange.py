@@ -17,4 +17,8 @@ def alternate(node):
         if not curr.next:
             break
 
-        if curr.next.data > curr.data
+        if curr.next.data > curr.data:
+            curr.next.data,curr.data = curr.data, curr.next.data
+        
+        prev = curr.next
+        curr = curr.next.next
