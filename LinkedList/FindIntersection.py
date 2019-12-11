@@ -18,4 +18,20 @@ def llLength(head):
 
 
 def intersect(AList, BList):
-    pass
+    lenA,lenB = llLength(AList), llLength(BList)
+    currA,currB = AList, BList
+
+
+    if lenA > lenB:
+        for _ in range(lenA-lenB):
+            currA = currA.next
+    else:
+        for _ in range(lenB-lenA):
+            currB = currB.next
+    
+
+    while(currA!=currB):
+        currA = currA.next
+        currB = currB.next
+    
+    return currA
