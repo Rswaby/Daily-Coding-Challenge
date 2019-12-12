@@ -14,5 +14,7 @@ class MaxStack:
     def pop(self):
         if self.maxvalues:
             self.maxvalues.pop()
-        
+    
         return self.stack.pop()
+    def max(self):
+        return self.maxvalues[-1]
