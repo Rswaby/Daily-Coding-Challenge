@@ -22,4 +22,9 @@ class LinkedList:
         prev.next = node
         node.prev = prev
         node.next = self.tail
-        self.tail.prev = node        
+        self.tail.prev = node
+    def remove(self,node):
+        prev = node.prev
+        nxt = node.next
+        prev.next = nxt
+        nxt.prev = prev
