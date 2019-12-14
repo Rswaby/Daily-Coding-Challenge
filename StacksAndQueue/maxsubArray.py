@@ -14,11 +14,22 @@ from collections import deque
 def maxOfSubarray(lst, k):
     q = deque()
     for i in range(k):
-        print(q)
+        #print(q)
         while q and lst[i] >= lst[q[-1]]:
             q.pop()
         q.append(i)
-    print(q)
+    #print(q)
 
+    #loop invariant: q is a list of indecies where
+    #there corresponding values are in desending order
 
-print(maxOfSubarray([10,5,2,7,8,7],3))
+    for i in range(k, len(lst)):
+        print(q[0])
+        while q and q[0] <= i - k:
+            q.popleft()
+        while q and lst[i] >= lst[q[-1]]:
+            q.pop()
+        q.append(i)
+    print(q[0])
+
+print(maxOfSubarray([2,5,2,7,8,7],3))
