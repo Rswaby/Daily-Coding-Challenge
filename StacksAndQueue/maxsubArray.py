@@ -17,7 +17,7 @@ def maxOfSubarray(lst, k):
         print(q)
         while q and lst[i] >= lst[q[-1]]:
             q.pop()
-        q.append()
+        q.append(i)
     print(q)
 
 
